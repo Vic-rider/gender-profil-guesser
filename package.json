@@ -1,6 +1,6 @@
 {
   "name": "gender-profil-guesser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Based on https://genderize.io/ it informs about the gender of a name or email according to the probability that it has to be it.",
   "main": "lib/index.js",
   "scripts": {
