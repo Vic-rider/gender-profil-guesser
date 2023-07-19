@@ -1,16 +1,16 @@
 {
-  "name": "detect-gender-from-name-or-email",
+  "name": "gender-profil-guesser",
   "version": "1.0.0",
-  "description": "Based on https://genderize.io/ it informs about the gender of a name according to the probability that it has to be it.",
+  "description": "Based on https://genderize.io/ it informs about the gender of a name or email according to the probability that it has to be it.",
   "main": "lib/index.js",
   "scripts": {
     "start": "node index.ts",
-    "test": "npm test",
-    "build": "tsc"
+    "test": "jest",
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vic-rider/gender-from-name-or-email.git"
+    "url": "git+https://github.com/Vic-rider/gender-profil-guesser.git"
   },
   "keywords": [
     "gender",
@@ -24,15 +24,20 @@
   "author": "Vincent A.S TOSSOU (Vic-rider)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vic-rider/gender-from-name-or-email/issues"
+    "url": "https://github.com/Vic-rider/gender-profil-guesser/issues"
   },
-  "homepage": "https://github.com/Vic-rider/gender-from-name-or-email#readme",
+  "homepage": "https://github.com/Vic-rider/gender-profil-guesser#readme",
   "dependencies": {
     "axios": "^1.4.0",
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@types/jest": "^29.5.2",
     "@types/node-fetch": "2.x",
+    "prettier": "^2.8.3",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.1.3"
   }
 }

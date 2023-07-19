@@ -1,2 +1,6 @@
 import { AxiosResponse } from 'axios';
-export declare function getGenderDatas(name_or_email: string): Promise<AxiosResponse>;
+export declare class GenderGuesser {
+    gender: any;
+    constructor();
+    guessGenderOf(name_or_email: string): Promise<AxiosResponse>;
+}
