@@ -20,5 +20,35 @@ export class GenderGuesser {
     });
   }
 
+  isMale(name_or_email: string): Promise<boolean> {
+
+    return new Promise((resolve, reject) => {
+      this.guessGenderOf(name_or_email)
+      .then((data) => {
+        if(String(data) === 'male') resolve(true);
+        reject(false);
+      })
+      .catch(() => {
+        reject(this.gender);
+      });
+    })
+    
+  }
+
+  isFemale(name_or_email: string): Promise<boolean> {
+
+    return new Promise((resolve, reject) => {
+      this.guessGenderOf(name_or_email)
+      .then((data) => {
+        if(String(data) === 'female') resolve(true);
+        reject(false);
+      })
+      .catch(() => {
+        reject(this.gender);
+      });
+    })
+
+  }
+
 
 }
